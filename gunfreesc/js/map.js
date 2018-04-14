@@ -1,6 +1,6 @@
 var geocoder;
 var map;
-var position;
+var currentPosition;
   function initMap() {
     geocoder = new google.maps.Geocoder();
     
@@ -19,11 +19,11 @@ var position;
   }
 
   function showPosition(position) {
-    var coordss = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-    map.setCenter(coordss)
+    currentPosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    map.setCenter(currentPosition)
     var marker = new google.maps.Marker({
       map: map,
-      position: coordss,
+      position: currentPosition,
       icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
     });
   }
