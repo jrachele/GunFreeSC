@@ -17,6 +17,19 @@
   })
 
 
+  function addLocation(name, address, reason) {
+    dbRefObject.push().set({
+      name: name,
+      address: address
+      reason: reason
+    }).then(function(result){
+      console.log("Successfully wrote data")
+    }).catch(function(error){
+      console.log("Something broke")
+      console.log(error);
+    })
+  }
+
   // Get elecments 
   
 
