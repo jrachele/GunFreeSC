@@ -14,7 +14,7 @@ var position;
       navigator.geolocation.getCurrentPosition(showPosition);
     }
     
-    codeAddress("Columbia, SC", false);
+    codeAddress(undefined, "Columbia, SC", undefined, false);
 
   }
 
@@ -28,16 +28,30 @@ var position;
     });
   }
 
-  function codeAddress(name, address, mark=true) {
+  function codeAddress(name, address, reason, mark=true) {
+
+
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == 'OK') {
         map.setCenter(results[0].geometry.location);
         if (mark) {
+          var contentString = '<h3>' + name + '</h3><h6>' + reason + '</h6>'
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+
+          });  
           var marker = new google.maps.Marker({
             map: map,
             position: results[0].geometry.location,
-            label: name,
+            title: name,
         });
+        marker.addListener('mouseover', function() {
+          infowindow.open(map, marker);
+        });
+        marker.addListener('mouseout', function() {
+          infowindow.close();
+        })
+
         }
         
       } else {

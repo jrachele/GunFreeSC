@@ -13,7 +13,7 @@
 
   const dbRefObject = firebase.database().ref();
   dbRefObject.on("child_added", function(snapshot){
-      codeAddress(snapshot.val().name, snapshot.val().address)
+      codeAddress(snapshot.val().name, snapshot.val().address, snapshot.val().reason)
   })
 
 
