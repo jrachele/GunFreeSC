@@ -17,7 +17,7 @@
 
 
   function addLocation(name, address, reason) {
-    if (!(name === "" || address === "" || reason === "")) { 
+    if (!(name === "" || address === "" || reason === "")) {
     dbRefObject.push().set({
       name: document.getElementById('nameBox').value,
       address: document.getElementById('addressBox').value,
@@ -25,9 +25,10 @@
     }).then(function(result){
       console.log("Successfully wrote data")
     }).catch(function(error){
-      console.log("Something broke")
-      console.log(error);
+      alert("Database error: " + error)
     })
+    } else {
+        alert("Must enter a name, address, and reason.");
     }
   }
 
