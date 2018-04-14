@@ -11,15 +11,12 @@
   };
   firebase.initializeApp(config);
 
-  // Get elecments 
-  const preObject = document.getElementById('object');
-  var place = {
-    'name': null,
-    'location': null,
-  }
+  var database = firebase.database();
+  
 
-  // create refrences 
-  const dbRefObject = firebase.database().databse().ref().chiled('object');
+
+  // Get elecments 
+  
 
   // realtime info
   //dbRefObject.on('value', snap => console.log(snap.val())); 
