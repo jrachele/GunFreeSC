@@ -11,8 +11,10 @@
   };
   firebase.initializeApp(config);
 
-  var database = firebase.database();
-  
+  const dbRefObject = firebase.database().ref();
+  dbRefObject.on("child_added", function(snapshot){
+      codeAddress(snapshot.val().name, snapshot.val().address)
+  })
 
 
   // Get elecments 
