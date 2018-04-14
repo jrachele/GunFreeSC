@@ -61,12 +61,35 @@
     <div style="height: 100vh">
         <div class="flex-center flex-column">
             <div id="map" style="height: 500px; width: 100%;"></div>
-            
+
         </div>
     </div>
-    
+
+
+
 
     <!-- SCRIPTS -->
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+
+
+
+
+
+
+
+
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -88,6 +111,9 @@
     messagingSenderId: "696337298049"
     };
     firebase.initializeApp(config);
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4ueK0bXT16Dq72DLbDlyWHYCAdYAaupk&callback=initMap">
     </script>
 </body>
 
