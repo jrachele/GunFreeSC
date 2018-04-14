@@ -1,4 +1,3 @@
-(function(){
 
   // Initialize Firebase
   const config = {
@@ -18,16 +17,18 @@
 
 
   function addLocation(name, address, reason) {
+    if (!(name === "" || address === "" || reason === "")) { 
     dbRefObject.push().set({
-      name: name,
-      address: address,
-      reason: reason
+      name: document.getElementById('nameBox').value,
+      address: document.getElementById('addressBox').value,
+      reason: document.getElementById('reasonBox').value
     }).then(function(result){
       console.log("Successfully wrote data")
     }).catch(function(error){
       console.log("Something broke")
       console.log(error);
     })
+    }
   }
 
   // Get elecments 
@@ -35,5 +36,3 @@
 
   // realtime info
   //dbRefObject.on('value', snap => console.log(snap.val())); 
-
-}());
