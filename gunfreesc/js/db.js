@@ -13,10 +13,10 @@
 
   // Get elecments 
   const preObject = document.getElementById('object');
-  //var place = {
-    //'name': "",
-    //'location': "",
-  //}
+  var place = {
+    'name': null,
+    'location': null,
+  }
 
   // create refrences 
   const dbRefObject = firebase.database().databse().ref().chiled('object');
