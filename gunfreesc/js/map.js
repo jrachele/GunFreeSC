@@ -35,17 +35,17 @@ var currentPosition;
       if (status == 'OK') {
         map.setCenter(results[0].geometry.location);
         if (mark) {
-          var posX = 33.9722359;
-          var posY = -81.01880970000002;
+          // var posX = 33.9722359;
+          // var posY = -81.01880970000002;
           // if (!(currentPosition === 'undefined')) {
           //   posX = currentPosition.lat();
           //   posY = currentPosition.lng();
           // }
-          var link = ' https://www.google.com/maps/dir/@'+
-          posX + ',' + posY + '/' +
-          encodeURI(address);
+          var link = 'https://www.google.com/maps/dir/?api=1&origin='+
+          encodeURI("Columbia SC") + '&destination=' +
+          encodeURI(address)+ '&travelmode=car';
 
-          var dirString = '<a href="' + link + '">Get Directions</a>'
+          var dirString = '<a target="_blank" href="' + link + '">Get Directions</a>'
           var contentString = '<h3>' + name + '</h3><h6>' + reason + '</h6>' + dirString;
           var infowindow = new google.maps.InfoWindow({
             content: contentString,
