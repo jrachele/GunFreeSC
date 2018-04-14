@@ -20,7 +20,7 @@
   function addLocation(name, address, reason) {
     dbRefObject.push().set({
       name: name,
-      address: address
+      address: address,
       reason: reason
     }).then(function(result){
       console.log("Successfully wrote data")
