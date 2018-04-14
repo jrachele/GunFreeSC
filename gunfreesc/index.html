@@ -57,12 +57,57 @@
 
 </nav>
 <!--/.Navbar-->
-
+<!-- 
     <div style="height: 100vh">
-        <div class="flex-center flex-column">
-            <div id="map" style="height: 500px; width: 100%;"></div>
+        <div class="col">
+            <div class="row">
+                    <img src="logo/gfsc.png" alt="" class="img-fluid mt-3 rounded" style="max-width: 100%; max-height: auto;">
+                <h2>Gun Free Soda City</h2>
+                <p>For a safer Columbia</p>
+            </div>
+
+            <div id="map" style="height: 500px; width: 500px;"></div>
         </div>
-    </div>
+    </div> -->
+
+    <!--Main layout-->
+    <main class="mt-5">
+
+            <!--Main container-->
+            <div class="container">
+    
+                <!--Grid row-->
+                <div class="row">
+    
+                    <!--Grid column-->
+                    <div class="col-md-4 mb-4">
+    
+                        <!--Featured image -->
+                        <img src="logo/gfsc.png" class="img-fluid" style="max-height: 300px; max-width: 100%" alt="">
+                        <!-- <div class="mask rgba-white-light"></div> -->
+    
+                    </div>
+                    <!--Grid column-->
+    
+                    <!--Grid column-->
+                    <div class="col-md-7 mb-4">
+                        
+                        <h2>Gun Free Soda City</h2>
+                        <hr>
+                        <p>For a safer Columbia</p>
+    
+                    </div>
+                    <!--Grid column-->
+    
+                </div>
+                <!--Grid row-->
+
+                <div class="row centered">
+                    <div id="map" style="height: 500px; width: 500px;"></div>
+                </div>
+
+            </div>
+    </main>
 
 
 
@@ -88,18 +133,6 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-    apiKey: "AIzaSyAmIDOWhsGzq_nqInVBovu8oG3srRCoO7c",
-    authDomain: "gunfreesodacity.firebaseapp.com",
-    databaseURL: "https://gunfreesodacity.firebaseio.com",
-    projectId: "gunfreesodacity",
-    storageBucket: "gunfreesodacity.appspot.com",
-    messagingSenderId: "696337298049"
-    };
-    firebase.initializeApp(config);
-    </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4ueK0bXT16Dq72DLbDlyWHYCAdYAaupk&callback=initMap">
     </script>
