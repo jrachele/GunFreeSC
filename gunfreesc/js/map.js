@@ -46,7 +46,7 @@ var currentPosition;
           encodeURI(address)+ '&travelmode=car';
 
           var dirString = '<a target="_blank" href="' + link + '">Get Directions</a>'
-          var contentString = '<h3>' + name + '</h3><h6>' + reason + '</h6>' + dirString;
+          var contentString = '<h3>' + name + '</h3><h6>' + address + '</h6><h6>' + reason + '</h6>' + dirString;
           var infowindow = new google.maps.InfoWindow({
             content: contentString,
           });
