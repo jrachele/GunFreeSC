@@ -41,7 +41,7 @@ var currentPosition;
           //   posX = currentPosition.lat();
           //   posY = currentPosition.lng();
           // }
-          var link = ' https://www.google.com/maps/dir/?api=AIzaSyB4ueK0bXT16Dq72DLbDlyWHYCAdYAaupk&origin='+
+          var link = 'https://www.google.com/maps/dir/?api=1&origin='+
           encodeURI("Columbia SC") + '&destination=' +
           encodeURI(address)+ '&travelmode=car';
 
