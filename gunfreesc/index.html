@@ -68,7 +68,7 @@
                                             <!-- <label for="addressBox" >Address of location</label> -->
                                     </div>
                                     <div class="row justify-content-center">
-                                        <button class="btn btn-dark btn-md">Add location</button>
+                                        <button class="btn btn-dark btn-md" onclick="sendAdd()">Add location</button>
                                     </div>
 
                                 </div>
@@ -212,6 +212,16 @@
     <!-- SCRIPTS -->
     <script src="js/map.js"></script>
     <script src="js/db.js"></script>
+
+    <script>
+        function sendAdd() {
+            console.log("Location add call")
+            var name = document.getElementById('nameBox').value;
+            var address = document.getElementById('addressBox').value;
+            var reason = document.getElementById('reasonBox').value;
+            addLocation(name, address, reason);
+        }
+    </script>
 </body>
 
 </html>
